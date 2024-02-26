@@ -1,0 +1,51 @@
+.final-screen {
+    padding: 20px;
+}
+
+.heading {
+    font-family: 'Roboto', sans-serif;
+    font-style: bold;
+}
+
+.divider {
+    border-top: 1px solid #ccc;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.right {
+    flex: 1;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

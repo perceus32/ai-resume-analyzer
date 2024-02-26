@@ -8,7 +8,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from django.core.files.storage import default_storage
 from django.conf import settings
-
 logger = logging.getLogger(__name__)
 
 @api_view(['POST'])
@@ -19,8 +18,6 @@ def upload_files(request):
         job_title = request.POST.get('jobTitle')
         job_description = request.POST.get('jobDescription')
         files = request.FILES.getlist('files')
-
-        openai.api_key = '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'
 
         relevance_scores = {}
         for file in files:

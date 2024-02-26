@@ -5,6 +5,7 @@ import { faCloudUpload } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import FileInfo from '../FileInfo/FileInfo';
 import Modal from '../Modal/Modal.js'
+import FilteredScreen from '../FilteredScreen/FilteredScreen.js';
 
 const FileUpload = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -12,6 +13,8 @@ const FileUpload = () => {
     const [showModal, setShowModal] = useState(false);
     const [jobTitle, setJobTitle] = useState('');
     const [jobDescription, setJobDescription] = useState('');
+    const [showFinalScreen, setShowFinalScreen] = useState(false);
+    const [finalScreenData, setFinalScreenData] = useState(null);
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -61,10 +64,12 @@ const FileUpload = () => {
           if (response.ok) {
             console.log('Submission successful');
             const responseData = await response.json();
+            setShowFinalScreen(true);
+            setFinalScreenData(responseData);
             console.log(responseData); 
-            setJobTitle('');
-            setJobDescription('');
-            setFiles([]);
+            // setJobTitle('');
+            // setJobDescription('');
+            // setFiles([]);
           } else {
             console.error('Submission failed');
           }
@@ -89,6 +94,10 @@ const FileUpload = () => {
 
   return (
     <div>
+      {showFinalScreen ? (
+      <FilteredScreen numberOfResumes={files.length} data = {finalScreenData}/> // Render FinalScreen when form is submitted successfully
+    ) : (
+      <>
     <div className={`rounded-rectangle ${isHovered ? 'hovered' : ''}`} 
         onDrop={handleDrop} onDragOver={handleDragOver} onDragLeave={handleDragLeave}>
         <FontAwesomeIcon icon={faCloudUpload} />
@@ -110,8 +119,9 @@ const FileUpload = () => {
         setJobDescription={setJobDescription}
         handleSubmit={handleSubmit}
         onClose={handleCloseModal} />}
+        </>
+    )}
     </div>
-    
   );
 };
 
