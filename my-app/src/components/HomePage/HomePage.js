@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
-import TopBar from './components/TopBar/TopBar.js';
-import FileUpload from './components/FileUpload/FileUpload.js';
+import './HomePage.css';
+import TopBar from '../TopBar/TopBar.js';
+import FileUpload from '../FileUpload/FileUpload.js';
 
-function App() {
+function HomePage() {
 
   return (
     <div className="app">
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;

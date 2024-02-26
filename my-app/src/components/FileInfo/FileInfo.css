@@ -1,0 +1,38 @@
+.file-details {
+    margin-top: 12px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #eadddd;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .pdf-icon {
+    color: red;
+    width: 50px;
+    height: 32px;
+  }
+  
+  .file-info {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .file-name,
+  .file-size,
+  .file-progress {
+    margin: 5px 0;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+  
+  .select-checkbox {
+    margin-left: auto; 
+    margin-right: 0; 
+  }

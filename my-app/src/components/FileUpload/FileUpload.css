@@ -1,0 +1,61 @@
+.rounded-rectangle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #5E5ADB; 
+    border-radius: 10px;
+    width: 50%;
+    height: 100px;
+    padding: 20px;
+    margin: 100px auto;
+    margin-bottom: 0px;
+    transition: background-color 0.3s ease;
+  }
+
+  .rounded-rectangle .fa-cloud-arrow-up {
+    font-size: 32px; 
+    margin-right: 10px; 
+  }
+
+  .rounded-rectangle .upload-text {
+    cursor: pointer;
+    color:#5E5ADB;
+  }
+  
+  .rounded-rectangle .upload-text:hover {
+    text-decoration: underline;
+  }
+
+  .rounded-rectangle.hovered {
+    background-color:#d6d5f2;
+  }
+
+  .rounded-rectangle .drag-text {
+    margin-top: 10px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cancel-button,
+  .submit-button {
+    margin-top: 20px;
+    padding: 13px 50px;
+    border-radius: 5px;
+    border: 2px solid #5E5ADB; 
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    margin-right: 10px;
+  }
+  
+  .submit-button {
+    background-color: #5E5ADB;
+    color: #fff;
+  }
