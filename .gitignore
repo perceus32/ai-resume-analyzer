@@ -1,0 +1,34 @@
+# Ignore Python bytecode files
+*.pyc
+
+# Ignore virtual environment directories
+venv/
+.env/
+
+# Ignore node modules and build artifacts for React
+my-app/node_modules/
+my-app/build/
+
+# Ignore Django database file
+crux-backend/crux_assignment_project/db.sqlite3
+
+# Ignore media and static files for Django
+crux-backend/crux_assignment_project/media/
+crux-backend/crux_assignment_project/static/
+
+# Ignore environment-specific settings
+.crux-backend/crux_assignment_project/.env.local
+.crux-backend/crux_assignment_project/.env.development.local
+.crux-backend/crux_assignment_project/.env.test.local
+.crux-backend/crux_assignment_project/.env.production.local
+
+# Ignore IDE and text editor configuration files
+.vscode/
+
+# Ignore logs and cache directories
+.crux-backend/crux_assignment_project/logs/
+.crux-backend/crux_assignment_project/cache/
+
+# Ignore any other environment-specific files or secrets
+.crux-backend/crux_assignment_project/.env*
+.crux-backend/crux_assignment_project/*.log
